@@ -11,8 +11,9 @@ public class Main {
         employeeBook.addEmployee("Реева Марина Михайловна", 3, 70000);
         employeeBook.addEmployee("Сидорова Александра Сергеевна", 9, 170000);
         employeeBook.addEmployee("Маринина Татьяна Владимировна", 9, 95000);
-
         employeeBook.printAllEmployees();
+        employeeBook.removeEmployee(0);
+        employeeBook.addEmployee("Владимирова Галина Ивановна", 7, 75000);
         double minSalary = employeeBook.getEmployeeMinSalary();
         double maxSalary = employeeBook.getEmployeeMaxSalary();
         maxSalary -= minSalary;
