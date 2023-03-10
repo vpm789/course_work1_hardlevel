@@ -197,6 +197,24 @@ public class EmployeeBook {
         }
     }
 
+    public void changeSalary(String employeeName, double newSalary) {
+        for (Employee employee : employees) {
+            if (employee != null && employee.getName().equals(employeeName)) {
+                employee.setSalary(newSalary);
+                return;
+            }
+        }
+        System.out.println("Сотрудник " + employeeName + " не найден.");
+    }
 
+    public void changeDepartment(String employeeName, int newDepartment) {
+        for (Employee employee : employees) {
+            if (employee != null && employee.getName().equals(employeeName)) {
+                employee.setDepartment(newDepartment);
+                return;
+            }
+        }
+        System.out.println("Сотрудник " + employeeName + " не найден.");
+    }
 
 }

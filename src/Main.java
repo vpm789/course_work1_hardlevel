@@ -37,7 +37,10 @@ public class Main {
         employeeBook.indexSalaryDepart(department, index);
         employeeBook.getEmployeesDepart(department);
         sc.close();
+        employeeBook.changeSalary("Владимирова Галина Ивановна", 750000);
+        employeeBook.changeDepartment("Владимирова Галина Ивановна", 14);
         employeeBook.getEmployeesLessSalary(randomSalary);
         employeeBook.getEmployeesMoreSalary(randomSalary);
+
     }
 }
