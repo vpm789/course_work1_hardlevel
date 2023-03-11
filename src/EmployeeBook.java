@@ -69,8 +69,13 @@ public class EmployeeBook {
                 }
             }
         }
-        System.out.println("Сотрудник с минимальной зарплатой: " + employeeMinSalary.getName());
-        return employeeMinSalary.getSalary();
+        if (employeeMinSalary != null) {
+            System.out.println("Сотрудник с минимальной зарплатой: " + employeeMinSalary.getName());
+            return employeeMinSalary.getSalary();
+        } else {
+            System.out.println("Сотрудники не найдены");
+            return 0;
+        }
     }
 
     public double getEmployeeMaxSalary() {
@@ -84,8 +89,13 @@ public class EmployeeBook {
                 }
             }
         }
-        System.out.println("Сотрудник с максимальной зарплатой: " + employeeMaxSalary.getName());
-        return employeeMaxSalary.getSalary();
+        if (employeeMaxSalary != null) {
+            System.out.println("Сотрудник с максимальной зарплатой: " + employeeMaxSalary.getName());
+            return employeeMaxSalary.getSalary();
+        } else {
+            System.out.println("Сотрудники не найдены");
+            return 0;
+        }
     }
 
     public void avgSalary() {
