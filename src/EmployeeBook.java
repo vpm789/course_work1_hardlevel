@@ -228,13 +228,13 @@ public class EmployeeBook {
 
     void printEmployeeDepart() {
         int currentDepartment = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null && currentDepartment != employees[i].getDepartment()) {
-                System.out.println("Сотрудники отдела " + employees[i].getDepartment() + ":");
-                currentDepartment = employees[i].getDepartment();
-                for (int j = 0; j < employees.length; j++) {
-                    if (employees[j] != null && employees[j].getDepartment() == employees[i].getDepartment()) {
-                        System.out.println(employees[j].getName());
+        for (Employee value : employees) {
+            if (value != null && currentDepartment != value.getDepartment()) {
+                System.out.println("Сотрудники отдела " + value.getDepartment() + ":");
+                currentDepartment = value.getDepartment();
+                for (Employee employee : employees) {
+                    if (employee != null && employee.getDepartment() == value.getDepartment()) {
+                        System.out.println(employee.getName());
                     }
                 }
             }
