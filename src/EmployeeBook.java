@@ -14,10 +14,9 @@ public class EmployeeBook {
         if (size >= employees.length) {
             System.out.println("Штат полный, прием новых сотрудников не ведется");
         }
-        Employee newEmployee = new Employee(name, department, salary);
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] == null) {
-                employees[i] = newEmployee;
+                employees[i] = new Employee(name, department, salary);
                 size++;
                 return;
             }
@@ -225,6 +224,21 @@ public class EmployeeBook {
             }
         }
         System.out.println("Сотрудник " + employeeName + " не найден.");
+    }
+
+    void printEmployeeDepart() {
+        int currentDepartment = 0;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && currentDepartment != employees[i].getDepartment()) {
+                System.out.println("Сотрудники отдела " + employees[i].getDepartment() + ":");
+                currentDepartment = employees[i].getDepartment();
+                for (int j = 0; j < employees.length; j++) {
+                    if (employees[j] != null && employees[j].getDepartment() == employees[i].getDepartment()) {
+                        System.out.println(employees[j].getName());
+                    }
+                }
+            }
+        }
     }
 
 }

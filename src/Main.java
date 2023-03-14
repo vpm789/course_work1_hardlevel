@@ -41,6 +41,6 @@ public class Main {
         employeeBook.changeDepartment("Владимирова Галина Ивановна", 14);
         employeeBook.getEmployeesLessSalary(randomSalary);
         employeeBook.getEmployeesMoreSalary(randomSalary);
-
+        employeeBook.printEmployeeDepart();
     }
 }
